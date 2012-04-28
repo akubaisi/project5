@@ -1,7 +1,12 @@
 Project5::Application.routes.draw do
-  get "pages/home"
 
-  get "pages/contact"
+  resources :pages
+
+  match '/pages/home' => "pages#home"
+ 
+
+ match '/pages/contact' => "pages#contact"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
