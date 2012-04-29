@@ -1,6 +1,6 @@
 Project5::Application.routes.draw do
 	
-  get "users/new"
+  #get "users/new"
 
   #get "users/update"
 
