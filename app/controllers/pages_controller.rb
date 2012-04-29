@@ -6,4 +6,13 @@ class PagesController < ApplicationController
   def contact
   @tite = "Contact"
   end
-end
+
+  def about
+  @tite = "About"
+  end
+  
+  def help
+  @tite = "Help"
+  end
+  
+ end
