@@ -52,10 +52,28 @@ describe UsersController do
   end
 
   describe "GET 'show'" do
-    it "returns http success" do
+  
+	before(:eahc) do
+		@user = Factory(:user)
+	end
+    
+	it "returns http success" do
       get 'show'
       response.should be_success
     end
+	
+	it "should find the right user" do
+		get 'show'
+		assign(:user).should == @user
+	end
+  
+#	it "should have a profile image" do
+#		get :show
+#		response.should have_selector("h1>img", :class => "gravatar")
+#	end
+  
+  
+  
   end
 
 end
