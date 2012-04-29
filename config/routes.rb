@@ -1,11 +1,27 @@
 Project5::Application.routes.draw do
 	
+  get "users/new"
+
+  #get "users/update"
+
+  #get "users/edit"
+
+  #get "users/create"
+
+  #get "users/destroy"
+
+  #get "users/index"
+
+  #get "users/show"
+
  #get "pages/home"
  #get "pages/contact"
  #get "pages/help"
  #get "pages/about"
  
- #resources :pages root :to =>  'pages#home'
+ resources :users
+ #pages root :to =>  'pages#home'
+match '/signup' => 'users#new'
 
  match '/contact' => 'pages#contact'
 
