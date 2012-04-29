@@ -1,16 +1,35 @@
 Project5::Application.routes.draw do
 	
- #resources :pages
- #root :to =>  'pages/home'
- 
- get "pages/home"
- get "pages/contact"
- 
-# match 'pages/home' => "pages#home"
- 
+  get "users/new"
 
- #match 'pages/contact' => "pages#contact"
+  #get "users/update"
 
+  #get "users/edit"
+
+  #get "users/create"
+
+  #get "users/destroy"
+
+  #get "users/index"
+
+  #get "users/show"
+
+ #get "pages/home"
+ #get "pages/contact"
+ #get "pages/help"
+ #get "pages/about"
+ 
+ resources :users
+ #pages root :to =>  'pages#home'
+match '/signup' => 'users#new'
+
+ match '/contact' => 'pages#contact'
+
+ match '/about' => 'pages#about'
+
+ match '/help' => 'pages#help'
+
+  root :to =>  'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
